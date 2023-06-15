@@ -1,8 +1,10 @@
 require("dotenv/config");
+
 const JwtConfig = {
-  privateKey: "",
-  publicKey: "",
+  privateKey: process.env.PRIVATE_KEY.replace(/\\n/g, "\n"),
+  publicKey: process.env.PUBLIC_KEY.replace(/\\n/g, "\n"),
 };
+
 const ServerConfig = {
   port: process.env.PORT,
 };
@@ -13,4 +15,5 @@ const DataBaseConfig = {
 module.exports = {
   SERVER_CONFIG: ServerConfig,
   DATABASE_CONFIG: DataBaseConfig,
+  JWTCONFIG: JwtConfig,
 };

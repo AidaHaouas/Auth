@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const app = express();
 const cors = require("cors");
 const authRouter = require("./src/Modules/Auth/Routes/index");
-const { SERVER_CONFIG, DATABASE_CONFIG } = require("./config");
+const { SERVER_CONFIG, DATABASE_CONFIG, JWTCONFIG } = require("./config");
 
 const PORT = SERVER_CONFIG.port;
 app.use(
